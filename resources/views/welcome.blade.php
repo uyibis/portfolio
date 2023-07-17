@@ -23,6 +23,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
     <![endif]-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 </head>
 
@@ -807,7 +808,7 @@
                 };
 
 // Make the POST request using fetch
-                fetch(url, options)
+               fetch(url, options)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error('Network response was not ok');
@@ -816,12 +817,21 @@
                     })
                     .then(data => {
                         // Handle the response data here
-                        console.log('Response data:', data);
+                        let d=data;
+                        console.log('Response data:', d);
+                        if(d.status==1){
+                            toast(d.message,"green");
+                            $("#content").html(d.message);
+                        }else{
+                            toast("Failed, please try again or use my email","red");
+                        }
                     })
                     .catch(error => {
                         // Handle any errors that occurred during the fetch request
+                        toast("Failed, please try again or use my email","red");
                         console.error('Error:', error);
                     });
+
                 $("#content").html(text);
             }
         }
@@ -847,6 +857,15 @@
         });
 
         handler.openIframe();
+    }
+    function toast(text,bgColor){
+        Toastify({
+            text: text,
+            className: "info",
+            style: {
+                background: bgColor,
+            }
+        }).showToast();
     }
 </script>
 @endverbatim
