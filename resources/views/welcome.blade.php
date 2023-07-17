@@ -2,11 +2,11 @@
 
 <!DOCTYPE html>
 <html lang="en-US">
-<!-- Mirrored from jthemes.net/themes/html/bako-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Jul 2023 16:29:53 GMT -->
+<!-- Mirrored from jthemes.net/themes/html/Uyioghosa E. I-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Jul 2023 16:29:53 GMT -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Bako - Personal Portfolio & Resume HTML Template</title>
-    <meta name="description" content="Bako - Personal Portfolio & Resume HTML Template">
+    <title>Uyioghosa E. I - Personal Portfolio & Resume HTML Template</title>
+    <meta name="description" content="Uyioghosa E. I - Personal Portfolio & Resume HTML Template">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="images/update/uyi_c.png">
 
@@ -871,5 +871,5 @@
 @endverbatim
 </body>
 
-<!-- Mirrored from jthemes.net/themes/html/bako-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Jul 2023 16:30:18 GMT -->
+<!-- Mirrored from jthemes.net/themes/html/Uyioghosa E. I-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Jul 2023 16:30:18 GMT -->
 </html>
