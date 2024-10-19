@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markdown-post img {
+    max-width: 100%;
+    height: auto;
+}
+
+.editor-toolbar.fullscreen {
+    height: 60px;
+    z-index: 20;
+}
+
+.markdown-post .heading-permalink {
+    visibility: hidden;
+    text-decoration: none;
+    margin-left: -10px;
+    color: #0ed60e;
+}
+
+.markdown-post .heading-permalink:after {
+    content: '# ';
+    visibility: visible;
+}
