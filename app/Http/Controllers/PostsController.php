@@ -35,8 +35,16 @@ class PostsController extends Controller
     public function index(): Renderable
     {
         $posts = Post::orderBy('id', 'desc')->paginate(9);
-       // dd($posts);
-        return view('index', compact('posts'));
+
+        $ogData = [
+            'title' => env('AUTHOR') . ' - Web Developer Portfolio',
+            'description' => 'Showcasing the expertise of ' . env('AUTHOR') . ' in web app design, development, and customization, with proven skills in PHP Laravel, C# .NET, and more.',
+            'image' => asset(env('AUTHOR_IMAGE')), // Dynamic author image
+            'url' => url()->current(), // Current page URL
+            'type' => 'website',
+        ];
+
+        return view('index', compact('posts','ogData'));
     }
 
     public function list()
@@ -44,6 +52,14 @@ class PostsController extends Controller
         //dd('hi');
         $posts = Post::all();
         // dd($posts);
+        $ogData = [
+            'title' => 'Posts List',
+            'description' => 'Explore a curated list of posts on various project.',
+            'image' => asset('images/default-og-image.jpg'), // Default image
+            'url' => url()->current(),
+            'type' => 'website',
+        ];
+
         return view('list', compact('posts'));
     }
 
@@ -66,8 +82,17 @@ class PostsController extends Controller
             return redirect('/');
         }
 
+        // Generate OG data for the post
+        $ogData = [
+            'title' => $post->title,
+            'description' => Str::limit(strip_tags($post->description), 150), // Truncate description and remove HTML tags
+            'image' => $post->featured_image ? asset($post->featured_image) : asset('images/default-post-image.jpg'),
+            'url' => url('/post/' . $post->slug),
+            'type' => 'article',
+        ];
+
         $post->description = $this->converter->convertToHtml($post->description);
-        return view('show', compact('post'));
+        return view('show', compact('post','ogData'));
     }
 
 

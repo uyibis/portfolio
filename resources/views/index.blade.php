@@ -5,10 +5,19 @@
 <!-- Mirrored from jthemes.net/themes/html/Uyioghosa E. I-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Jul 2023 16:29:53 GMT -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Uyioghosa E. I - Personal Portfolio & Resume HTML Template</title>
-    <meta name="description" content="Uyioghosa E. I - Personal Portfolio & Resume HTML Template">
+
+    <meta name="description" content="Uyioghosa E. I - Personal Portfolio & Resume">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="images/update/uyi_c.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset(env('AUTHOR_IMAGE'))}}">
+
+    <title>{{ $ogData['title'] ?? 'Uyioghosa E. I - Personal Portfolio & Resume' }}</title>
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="{{ $ogData['title'] ?? '' }}">
+    <meta property="og:description" content="{{ $ogData['description'] ?? '' }}">
+    <meta property="og:image" content="{{ $ogData['image'] ?? '' }}">
+    <meta property="og:url" content="{{ $ogData['url'] ?? '' }}">
+    <meta property="og:type" content="{{ $ogData['type'] ?? 'website' }}">
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
@@ -49,8 +58,8 @@
             <span></span>
             <span></span>
         </button>
-        <a href="index-2.html" class="logo"><img  style="height: 20em; width: 20em;"  src="images/update/uyi_c.png" alt="Uyioghosa E.I" /></a>
-        <a href="index-2.html" class="site-title dot ml-2">Uyioghosa E.I</a>
+        <a href="index-2.html" class="logo"><img  style="height: 20em; width: 20em;"  src="{{asset(env('AUTHOR_IMAGE'))}}" alt="{{env('AUTHOR')}}" /></a>
+        <a href="index-2.html" class="site-title dot ml-2">{{env('AUTHOR')}}</a>
     </div>
 
     <!-- header -->
@@ -59,8 +68,8 @@
             <span aria-hidden="true">&times;</span>
         </button>
         <div class="header-inner d-flex align-items-start flex-column">
-            <a href="index-2.html"><img style="height: 8em; width: 9em;" src="images/update/uyi_c.png" alt="Uyioghosa E.I" /></a>
-            <a href="index-2.html" class="site-title dot mt-3">Uyioghosa E.I</a>
+            <a href="#"><img style="height: 8em; width: 9em;" src="{{asset(env('AUTHOR_IMAGE'))}}" alt="Uyioghosa E.I" /></a>
+            <a href="#" class="site-title dot mt-3">Uyioghosa E.I</a>
             <span class="site-slogan">Web App Developer</span>
 
             <!-- navigation menu -->
@@ -96,9 +105,9 @@
         <!-- section hero -->
         <section class="hero background parallax shadow-dark d-flex align-items-center" id="home" data-image-src="images/hero.jpg">
             <div class="cta mx-auto mt-2">
-                <h1 class="mt-0 mb-4">I’m Uyioghosa E.I<span class="dot"></span></h1>
+                <h1 class="mt-0 mb-4">I’m {{env('AUTHOR')}}<span class="dot"></span></h1>
                 <p class="mb-4">I am the architect of digital possibilities, weaving lines of code into seamless experiences. With each keystroke, I unlock the doors to innovation and shape the online landscape. As a productive web developer, I blend creativity and efficiency, crafting digital marvels that inspire and empower.</p>
-                <a href="cv.pdf" class="btn btn-default btn-lg mr-3"><i class="icon-grid"></i>View Portfolio</a>
+                <a href="cv.pdf" class="btn btn-default btn-lg mr-3"><i class="icon-grid"></i>View Resume</a>
                 <div class="spacer d-md-none d-lg-none d-sm-none" data-height="10"></div>
                 <a href="mailto:uyibis@outlook.com" class="btn btn-border-light btn-lg"><i class="icon-envelope"></i>Hire me</a>
             </div>
@@ -112,14 +121,14 @@
 
             <div class="row">
                 <div class="col-md-3">
-                    <img src="images/update/uyi_c.png" alt="about" />
+                    <img src="{{asset(env('AUTHOR_IMAGE'))}}" alt="about" />
                 </div>
                 <div class="col-md-9">
                     <h2 class="mt-4 mt-md-0 mb-4">Hello,</h2>
-                    <p class="mb-0">I am Uyioghosa E.I, web developer from Benin, Nigeria. I have rich experience in web app design and building and customization, also I am good at application design.</p>
+                    <p class="mb-0">I am {{env('AUTHOR')}}, web developer from Benin, Nigeria. I have rich experience in web app design and building and customization, also I am good at application design.</p>
                     <div class="row my-4">
                         <div class="col-md-6">
-                            <p class="mb-2">Name: <span class="text-dark">Uyioghosa E.I</span></p>
+                            <p class="mb-2">Name: <span class="text-dark">{{env('AUTHOR')}}</span></p>
                             <p class="mb-0">Birthday: <span class="text-dark">01 August, 1989</span></p>
                         </div>
                         <div class="col-md-6 mt-2 mt-md-0 mt-sm-2">
@@ -255,8 +264,7 @@
                     <div class="service-item text-center">
                         <i class="icon-globe icon-simple"></i>
                         <h4 class="my-3">Development</h4>
-                        <p class="mb-0">In the realm of web development, I harness my skills to craft digital wonders, bringing ideas to life one line of code at a time.</p>
-                    </div>
+                        <p class="mb-0">As a versatile developer, I bring ideas to life through expertise in C# Blazor, .NET Windows applications, Laravel PHP, WordPress plugins, and Shopify apps, crafting seamless digital solutions one line of code at a time.</p>                    </div>
                     <div class="spacer" data-height="20"></div>
                 </div>
 
@@ -265,8 +273,7 @@
                     <div class="service-item text-center">
                         <i class="icon-chemistry icon-simple"></i>
                         <h4 class="my-3">Design</h4>
-                        <p class="mb-0">I weave digital dreams, blending creativity and code, to craft captivating web experiences that leave an indelible mark.</p>
-                    </div>
+                        <p class="mb-0">I blend creativity with code to craft dynamic applications and web experiences, transforming ideas into captivating digital realities that make a lasting impact.</p>                    </div>
                     <div class="spacer" data-height="20"></div>
                 </div>
 
@@ -275,8 +282,7 @@
                     <div class="service-item text-center">
                         <i class="icon-directions icon-simple"></i>
                         <h4 class="my-3">Advertising</h4>
-                        <p class="mb-0">Good web design for advertising captures attention, conveys the message with clarity, and entices engagement.</p>
-                    </div>
+                        <p class="mb-0">I drive traffic through organic SEO and targeted marketing ads, using web design to capture attention, deliver clear messaging, and encourage user engagement.</p>                    </div>
                     <div class="spacer" data-height="20"></div>
                 </div>
 
@@ -285,8 +291,7 @@
                     <div class="service-item text-center">
                         <i class="icon-rocket icon-simple"></i>
                         <h4 class="my-3">SEO</h4>
-                        <p class="mb-0">SEO thrives when embraced by the art of web design, where a harmonious blend of aesthetics and functionality creates a digital masterpiece that captivates users and search engines alike.</p>
-                    </div>
+                        <p class="mb-0">SEO flourishes when paired with effective web design, where the seamless combination of aesthetics and functionality produces a digital experience that captivates both users and search engines.</p>   </div>
                     <div class="spacer d-md-none d-lg-none" data-height="20"></div>
                 </div>
 

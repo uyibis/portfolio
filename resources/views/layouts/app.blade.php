@@ -16,6 +16,7 @@
     <title>@yield('title')</title>
     @yield('styles')
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    
     <!-- Scripts -->
 </head>
 <body>
