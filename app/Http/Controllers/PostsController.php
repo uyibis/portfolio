@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Project;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use League\CommonMark\MarkdownConverter;
 
 
-class PostsController extends Controller
+class PostsController extends \App\Http\Controllers\Controller
 {
 
     /**
@@ -25,6 +26,12 @@ class PostsController extends Controller
     public function __construct(MarkdownConverter $converter)
     {
         $this->converter = $converter;
+
+        $this->middleware('auth')->except([
+            'index',
+            'show',
+            'list',
+        ]);
     }
 
     /**
@@ -34,7 +41,7 @@ class PostsController extends Controller
      */
     public function index(): Renderable
     {
-        $posts = Post::orderBy('id', 'desc')->paginate(9);
+        $posts = Project::orderBy('id', 'desc')->paginate(9);
 
         $ogData = [
             'title' => env('AUTHOR') . ' - Web Developer Portfolio',
@@ -50,7 +57,7 @@ class PostsController extends Controller
     public function list()
     {
         //dd('hi');
-        $posts = Post::all();
+        $posts = Project::all();
         // dd($posts);
         $ogData = [
             'title' => 'Posts List',
@@ -71,9 +78,9 @@ class PostsController extends Controller
     public function show($slug)
     {
         if (is_numeric($slug)) {
-            $post = Post::findOrFail($slug);
+            $post = Project::findOrFail($slug);
         } else {
-            $post = Post::where('slug', $slug)->firstOrFail();
+            $post = Project::where('slug', $slug)->firstOrFail();
         }
 
         // Prevent showing draft posts to the public
@@ -113,6 +120,26 @@ class PostsController extends Controller
          return view('show', compact('post'));
      }*/
 
+    public function uploadProjectImages(Request $request)
+    {
+        $this->validate($request, [
+            'images_files' => 'required|array|min:1',
+            'images_files.*' => 'required|image|max:5120',
+        ]);
+
+        $storedImages = [];
+        foreach ((array) $request->file('images_files', []) as $imageFile) {
+            if ($imageFile) {
+                $storedPath = $imageFile->store('projects', 'public');
+                $storedImages[] = '/storage/' . $storedPath;
+            }
+        }
+
+        return response()->json([
+            'images' => $storedImages,
+        ], 201);
+    }
+
     /**
      * Show a preview of the post before publishing.
      *
@@ -123,28 +150,55 @@ class PostsController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|min:3|max:150',
+            'link' => 'nullable|string|max:2048',
             'description' => 'required|min:3',
+            'stacks' => 'nullable|string|max:2048',
+            'images' => 'required_without:images_files|array|min:1',
+            'images.*' => 'required|string|max:2048',
+            'images_files' => 'required_without:images|array|min:1',
+            'images_files.*' => 'required|image|max:5120',
+            'publish' => 'nullable|boolean',
         ]);
 
-        $post = new Post();
+        $post = new Project();
         $post->title = $request->title;
+        $post->link = $this->normalizeExternalLink($request->input('link'));
         $post->description = $request->description;
         $post->slug = Str::slug($request->title) . '-' . time();
-        $post->publish = false; // Mark as unpublished since it's a preview
+        $post->publish = (bool) $request->input('publish', false);
 
-        // Regular expression to match image URLs
-        $imageRegex = '/<img[^>]+src="([^">]+)"/';
-        $featuredImage = null;
-
-        // Check if an image URL is found in the description
-        if (preg_match($imageRegex, $post->description, $matches)) {
-            $featuredImage = $matches[1]; // The first match (image URL)
+        if ($request->hasFile('images_files')) {
+            $storedImages = [];
+            foreach ((array) $request->file('images_files', []) as $imageFile) {
+                if ($imageFile) {
+                    $storedPath = $imageFile->store('projects/previews', 'public');
+                    $storedImages[] = '/storage/' . $storedPath;
+                }
+            }
+            $post->images = $storedImages;
+            $post->featured_image = $storedImages[0] ?? null;
+        } else {
+            $images = $request->input('images', []);
+            if (!is_array($images)) {
+                $images = [];
+            }
+            $post->images = collect($images)
+                ->map(fn ($v) => is_string($v) ? $this->normalizePublicPath($v) : null)
+                ->filter()
+                ->values()
+                ->all();
+            $post->featured_image = (is_array($post->images) && count($post->images)) ? $post->images[0] : null;
         }
 
-        $post->featured_image = $featuredImage;
+        $stacksRaw = (string) $request->input('stacks', '');
+        $post->stacks = collect(explode(',', $stacksRaw))
+            ->map(fn ($v) => trim($v))
+            ->filter()
+            ->unique()
+            ->values()
+            ->all();
 
-        // Convert description to HTML using the same converter as in show method
-        $post->description = $this->converter->convertToHtml($post->description);
+        // images/featured_image are derived from either uploaded files or the provided image paths.
 
         //dd($post);
         // Return the view for preview (could be the same or different from 'show')
@@ -171,36 +225,62 @@ class PostsController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|min:3|max:150',
+            'link' => 'nullable|string|max:2048',
             'description' => 'required|min:3',
+            'stacks' => 'nullable|string|max:2048',
+            'images' => 'required_without:images_files|array|min:1',
+            'images.*' => 'required|string|max:2048',
+            'images_files' => 'required_without:images|array|min:1',
+            'images_files.*' => 'required|image|max:5120',
+            'publish' => 'nullable|boolean',
         ]);
 
-        $post = new Post();
+        $post = new Project();
         $post->title = $request->title;
+        $post->link = $this->normalizeExternalLink($request->input('link'));
         $post->description = $request->description;
         $post->slug = Str::slug($request->title) . '-' . time();
 
-        // Check if the user clicked "Save as Draft" or "Save Tutorial"
-        if ($request->input('action') == 'draft') {
-            $post->publish = false; // Mark as draft
-            $message = 'Tutorial saved as draft!';
+        $post->publish = (bool) $request->input('publish', false);
+        $message = $post->publish ? 'Project published successfully!' : 'Project saved as draft!';
+
+        if ($request->hasFile('images_files')) {
+            $storedImages = [];
+            foreach ((array) $request->file('images_files', []) as $imageFile) {
+                if ($imageFile) {
+                    $storedPath = $imageFile->store('projects', 'public');
+                    $storedImages[] = '/storage/' . $storedPath;
+                }
+            }
+            $post->images = $storedImages;
+            $post->featured_image = $storedImages[0] ?? null;
         } else {
-            $post->publish = true; // Mark as published
-            $message = 'Tutorial published successfully!';
+            $images = $request->input('images', []);
+            if (!is_array($images)) {
+                $images = [];
+            }
+            $post->images = collect($images)
+                ->map(fn ($v) => is_string($v) ? $this->normalizePublicPath($v) : null)
+                ->filter()
+                ->unique()
+                ->values()
+                ->all();
+            $post->featured_image = (is_array($post->images) && count($post->images)) ? $post->images[0] : null;
         }
 
-        // Use regular expression to extract the first image URL from Markdown-style image tags
-        $imageRegex = '/!\[.*?\]\((.*?)\)/'; // Matches Markdown images like ![](url)
-        if (preg_match($imageRegex, $post->description, $matches)) {
-            $post->featured_image = $matches[1]; // The first image URL
-        } else {
-            // If no featured image is found, do not proceed with saving
-            session()->flash('error', 'No featured image found in the description.');
-            return back()->withInput(); // Redirect back with input data
-        }
+        $stacksRaw = (string) $request->input('stacks', '');
+        $post->stacks = collect(explode(',', $stacksRaw))
+            ->map(fn ($v) => trim($v))
+            ->filter()
+            ->unique()
+            ->values()
+            ->all();
+
+        // images/featured_image are derived from either uploaded files or the provided image paths.
 
         if ($post->save()) {
             session()->flash('success', $message);
-            return redirect()->route('posts.show', $post->slug);
+            return redirect()->route('projects.show', $post->slug);
         }
 
         session()->flash('error', 'Error saving tutorial!');
@@ -249,9 +329,13 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function edit(int $id)
+    public function edit($id)
     {
-        $post = Post::find($id);
+        if (is_numeric($id)) {
+            $post = Project::find($id);
+        } else {
+            $post = Project::where('slug', $id)->first();
+        }
 
         if (empty($post)) {
             session()->flash('error', 'Tutorial not found !');
@@ -268,9 +352,13 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function update(Request $request, int $id)
+    public function update(Request $request, $id)
     {
-        $post = Post::find($id);
+        if (is_numeric($id)) {
+            $post = Project::find($id);
+        } else {
+            $post = Project::where('slug', $id)->first();
+        }
 
         if (empty($post)) {
             session()->flash('error', 'Tutorial not found !');
@@ -286,19 +374,91 @@ class PostsController extends Controller
 
         $this->validate($request, [
             'title' => 'required|min:3|max:150',
+            'link' => 'nullable|string|max:2048',
             'description' => 'required|min:3',
+            'publish' => 'nullable|boolean',
+            'stacks' => 'nullable|string|max:2048',
+            'images' => 'nullable|array',
+            'images.*' => 'required|string|max:2048',
+            'images_files' => 'nullable|array',
+            'images_files.*' => 'required|image|max:5120',
         ]);
 
         $post->title = $request->title;
+        $post->link = $this->normalizeExternalLink($request->input('link'));
         $post->description = $request->description;
 
-        if ($post->save()) {
-            session()->flash('success', 'Tutorial updated successfully !');
-            return redirect()->route('posts.show', $post->slug);
+        if ($request->has('publish')) {
+            $post->publish = (bool) $request->input('publish');
+        } else {
+            $post->publish = false;
         }
 
-        session()->flash('error', 'Error updating tutorial !');
+        if ($request->hasFile('images_files')) {
+            $storedImages = [];
+            foreach ((array) $request->file('images_files', []) as $imageFile) {
+                if ($imageFile) {
+                    $storedPath = $imageFile->store('projects', 'public');
+                    $storedImages[] = '/storage/' . $storedPath;
+                }
+            }
+            $post->images = $storedImages;
+            $post->featured_image = $storedImages[0] ?? null;
+        } elseif ($request->has('images')) {
+            $images = $request->input('images', []);
+            if (!is_array($images)) {
+                $images = [];
+            }
+            $post->images = collect($images)
+                ->map(fn ($v) => is_string($v) ? $this->normalizePublicPath($v) : null)
+                ->filter()
+                ->unique()
+                ->values()
+                ->all();
+            $post->featured_image = (is_array($post->images) && count($post->images)) ? $post->images[0] : null;
+        }
+
+        $stacksRaw = (string) $request->input('stacks', '');
+        $post->stacks = collect(explode(',', $stacksRaw))
+            ->map(fn ($v) => trim($v))
+            ->filter()
+            ->unique()
+            ->values()
+            ->all();
+
+        // If images were not provided, keep existing images/featured_image.
+
+        if ($post->save()) {
+            session()->flash('success', 'Project updated successfully!');
+            return redirect()->route('projects.show', $post->slug);
+        }
+
+        session()->flash('error', 'Error updating project!');
         return back()->withInput();
+    }
+
+    private function normalizeExternalLink($raw)
+    {
+        $value = is_string($raw) ? trim($raw) : '';
+        if ($value === '') {
+            return null;
+        }
+
+        // If user pasted without scheme, assume https.
+        if (!preg_match('/^[a-z][a-z0-9+.-]*:\/\//i', $value)) {
+            $value = 'https://' . ltrim($value, '/');
+        }
+
+        return $value;
+    }
+
+    public function togglePublish(Project $project)
+    {
+        $project->publish = !$project->publish;
+        $project->save();
+
+        session()->flash('success', $project->publish ? 'Project published.' : 'Project set to draft.');
+        return back();
     }
 
     /**
@@ -307,9 +467,13 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function destroy(int $id)
+    public function destroy($id)
     {
-        $post = Post::find($id);
+        if (is_numeric($id)) {
+            $post = Project::find($id);
+        } else {
+            $post = Project::where('slug', $id)->first();
+        }
 
         if (empty($post)) {
             session()->flash('error', 'Tutorial not found !');
@@ -330,5 +494,27 @@ class PostsController extends Controller
         }
 
         return back();
+    }
+
+    private function normalizePublicPath($path): ?string
+    {
+        if ($path === null) {
+            return null;
+        }
+
+        $path = trim((string) $path);
+        if ($path === '') {
+            return null;
+        }
+
+        if (Str::startsWith($path, ['http://', 'https://', '//', 'data:'])) {
+            return $path;
+        }
+
+        if (Str::startsWith($path, '/')) {
+            return $path;
+        }
+
+        return '/' . $path;
     }
 }

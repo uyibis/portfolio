@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ighodaro Egharevba Uyioghosa - PHP Full-Stack Developer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.3;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 10px;
+            font-size: 12px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #dc3545 0%, #6f42c1 100%);
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        
+        .header h2 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .header .tagline {
+            font-size: 0.85em;
+            font-style: italic;
+            opacity: 0.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-section {
+            background: #f8f9fa;
+            padding: 10px 15px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 8px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            color: #495057;
+        }
+        
+        .contact-item .icon {
+            font-size: 12px;
+            width: 15px;
+        }
+        
+        .main-content {
+            padding: 0;
+        }
+        
+        .two-column-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .left-column {
+            width: 35%;
+            vertical-align: top;
+            background: #f8f9fa;
+            padding: 15px 15px;
+            border-right: 2px solid #dc3545;
+        }
+        
+        .right-column {
+            width: 65%;
+            vertical-align: top;
+            padding: 15px 15px;
+        }
+        
+        .section {
+            margin-bottom: 15px;
+        }
+        
+        .section h3 {
+            color: #495057;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            border-bottom: 2px solid #dc3545;
+            padding-bottom: 3px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .section h3 .emoji {
+            font-size: 1em;
+        }
+        
+        .tech-category {
+            margin-bottom: 10px;
+        }
+        
+        .tech-category h4 {
+            color: #6c757d;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 2px;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            margin-bottom: 5px;
+        }
+        
+        .tech-tag {
+            background: #ffe6e6;
+            color: #dc3545;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 9px;
+            font-weight: 500;
+            border: 1px solid #f8d7da;
+        }
+        
+        .job {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .job:last-child {
+            border-bottom: none;
+        }
+        
+        .job-header {
+            margin-bottom: 6px;
+        }
+        
+        .job-title {
+            font-size: 0.95em;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 2px;
+        }
+        
+        .job-company {
+            color: #dc3545;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+        
+        .job-date {
+            color: #6c757d;
+            font-style: italic;
+            font-size: 0.8em;
+        }
+        
+        .job ul {
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+        
+        .job li {
+            margin-bottom: 4px;
+            color: #495057;
+            font-size: 0.85em;
+            line-height: 1.3;
+        }
+        
+        .project {
+            margin-bottom: 12px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 3px solid #dc3545;
+        }
+        
+        .project-title {
+            font-size: 0.95em;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 3px;
+        }
+        
+        .project-subtitle {
+            color: #dc3545;
+            font-style: italic;
+            margin-bottom: 5px;
+            font-size: 0.85em;
+        }
+        
+        .project-description {
+            margin-bottom: 6px;
+            color: #495057;
+            font-size: 0.8em;
+            line-height: 1.3;
+        }
+        
+        .project-details {
+            font-size: 0.75em;
+            color: #6c757d;
+            line-height: 1.2;
+        }
+        
+        .project-details strong {
+            color: #495057;
+        }
+        
+        .project-details div {
+            margin-bottom: 2px;
+        }
+        
+        .achievements ul, .education ul, .certifications ul {
+            margin-left: 15px;
+        }
+        
+        .achievements li, .education li, .certifications li {
+            margin-bottom: 4px;
+            color: #495057;
+            font-size: 0.85em;
+            line-height: 1.3;
+        }
+        
+        .what-sets-apart ul {
+            margin-left: 15px;
+        }
+        
+        .what-sets-apart li {
+            margin-bottom: 5px;
+            color: #495057;
+            font-size: 0.85em;
+            line-height: 1.3;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #dc3545 0%, #6f42c1 100%);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+        
+        /* Print-specific styles */
+        @media print {
+            body { 
+                padding: 0; 
+                font-size: 11px;
+                line-height: 1.2;
+            }
+            .container { 
+                box-shadow: none; 
+                border-radius: 0;
+                max-width: none;
+                width: 100%;
+            }
+            .header { 
+                padding: 15px 15px;
+                page-break-inside: avoid;
+            }
+            .header h1 { 
+                font-size: 1.6em; 
+                margin-bottom: 3px;
+            }
+            .header h2 { 
+                font-size: 1em; 
+                margin-bottom: 8px;
+            }
+            .header .tagline { 
+                font-size: 0.8em; 
+            }
+            .contact-section { 
+                padding: 8px 12px;
+                page-break-inside: avoid;
+            }
+            .left-column, .right-column { 
+                padding: 12px 12px;
+            }
+            .section { 
+                margin-bottom: 12px;
+            }
+            .section h3 { 
+                font-size: 1em; 
+                margin-bottom: 6px;
+            }
+            .job { 
+                margin-bottom: 12px; 
+                padding-bottom: 8px;
+            }
+            .project { 
+                margin-bottom: 10px; 
+                padding: 8px;
+            }
+            .tech-category { 
+                margin-bottom: 8px;
+            }
+            .tech-tag { 
+                font-size: 8px; 
+                padding: 1px 4px;
+            }
+            .footer { 
+                padding: 8px;
+                font-size: 0.8em;
+            }
+            /* Prevent page breaks inside important elements */
+            .job, .project, .tech-category {
+                page-break-inside: avoid;
+            }
+            /* Force page break after first page content */
+            .left-column .section:nth-child(3) {
+                page-break-after: always;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .two-column-table,
+            .two-column-table tbody,
+            .two-column-table tr,
+            .two-column-table td {
+                display: block;
+                width: 100%;
+            }
+            
+            .left-column,
+            .right-column {
+                width: 100%;
+                border-right: none;
+                border-bottom: 3px solid #dc3545;
+            }
+            
+            .right-column {
+                border-bottom: none;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>IGHODARO EGHAREVBA UYIOGHOSA</h1>
+            <h2>Senior PHP Full-Stack Developer & Web Application Architect</h2>
+            <div class="tagline">
+                An innovative and technically proficient Full-Stack Developer skilled in analyzing requirements and building industry-standard software solutions. Expert in PHP (Laravel), modern JavaScript frameworks, and database design. Adept at working both independently and collaboratively within agile teams. Currently with over 6 years of experience in web development and system architecture.
+            </div>
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <span class="icon">📍</span>
+                    <span>All Saints Community Phase 2, Sangotedo, Lekki-Epe, Lagos</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📱</span>
+                    <span>+2348164815827</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📧</span>
+                    <span>uyibis@outlook.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">🔗</span>
+                    <span>GitHub: github.com/uyibis</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">🔗</span>
+                    <span>LinkedIn: linkedin.com/in/ighodaro-uyioghosa</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">🐳</span>
+                    <span>Docker Hub: hub.docker.com/u/uyibis</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content with Two Columns -->
+        <div class="main-content">
+            <table class="two-column-table">
+                <tr>
+                    <!-- Left Column -->
+                    <td class="left-column">
+                        <!-- Technical Stack -->
+                        <div class="section">
+                            <h3><span class="emoji">🛠️</span> Technical Stack</h3>
+                            
+                            <div class="tech-category">
+                                <h4>Backend Technologies</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">PHP</span>
+                                    <span class="tech-tag">Laravel</span>
+                                    <span class="tech-tag">Laravel Sail</span>
+                                    <span class="tech-tag">RabbitMQ</span>
+                                    <span class="tech-tag">Pusher</span>
+                                    <span class="tech-tag">Composer</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>Frontend Technologies</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Vue.js 3</span>
+                                    <span class="tech-tag">React.js</span>
+                                    <span class="tech-tag">JavaScript ES6+</span>
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3/SCSS</span>
+                                    <span class="tech-tag">Bootstrap</span>
+                                    <span class="tech-tag">Tailwind CSS</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>Databases</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">MySQL</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">Redis</span>
+                                    <span class="tech-tag">SQLite</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">Eloquent ORM</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>DevOps & Tools</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag">Kubernetes</span>
+                                    <span class="tech-tag">Git</span>
+                                    <span class="tech-tag">GitHub Actions</span>
+                                    <span class="tech-tag">AWS</span>
+                                    <span class="tech-tag">DigitalOcean</span>
+                                    <span class="tech-tag">Apache</span>
+                                    <span class="tech-tag">Nginx</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>APIs & Integration</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">RESTful APIs</span>
+                                    <span class="tech-tag">GraphQL</span>
+                                    <span class="tech-tag">Webhooks</span>
+                                    <span class="tech-tag">JWT</span>
+                                    <span class="tech-tag">OAuth</span>
+                                    <span class="tech-tag">Passport</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>E-commerce & CMS</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Bagisto</span>
+                                    <span class="tech-tag">WooCommerce</span>
+                                    <span class="tech-tag">Shopify APIs</span>
+                                    <span class="tech-tag">PayPal</span>
+                                    <span class="tech-tag">Stripe</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Certifications -->
+                        <div class="section certifications">
+                            <h3><span class="emoji">🏆</span> Certifications</h3>
+                            <ul>
+                                <li><strong>Laravel Certification</strong> - Advanced PHP Development</li>
+                                <li><strong>AWS Certified Developer</strong> - Associate</li>
+                                <li><strong>Shopify Partner Certification</strong></li>
+                                <li><strong>Software Engineering</strong> - ALX Holberton</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Education -->
+                        <div class="section education">
+                            <h3><span class="emoji">🎓</span> Education</h3>
+                            <div style="margin-bottom: 10px;">
+                                <h4 style="color: #495057; margin-bottom: 3px; font-size: 0.9em;">University of Benin, Benin City</h4>
+                                <div style="font-weight: 500; color: #dc3545; font-size: 0.85em;">Bachelor of Engineering</div>
+                                <div style="font-style: italic; color: #6c757d; font-size: 0.75em;">October 2010 – January 2016</div>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: #495057; margin-bottom: 3px; font-size: 0.9em;">ALX Holberton Software Engineering</h4>
+                                <div style="font-weight: 500; color: #dc3545; font-size: 0.85em;">Software Engineering Program</div>
+                                <div style="font-style: italic; color: #6c757d; font-size: 0.75em;">October 2022 – November 2023</div>
+                                <div style="color: #495057; font-size: 0.75em; margin-top: 3px;">Specialized in Full-Stack Web Development</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Key Achievements -->
+                        <div class="section achievements">
+                            <h3><span class="emoji">📈</span> Key Achievements</h3>
+                            <ul>
+                                <li><strong>Performance Expert:</strong> Optimized Laravel applications achieving 50% faster page load times</li>
+                                <li><strong>Architecture & Design:</strong> Expert in applying SOLID principles and clean architecture patterns for scalable software solutions</li>
+                                <li><strong>E-commerce Specialist:</strong> Built scalable online stores processing 100K+ transactions monthly</li>
+                                <li><strong>Team Leadership:</strong> Led development teams in delivering 20+ successful web projects</li>
+                                <li><strong>API Integration:</strong> Successfully integrated 50+ third-party APIs and payment gateways</li>
+                                <li><strong>DevOps Proficiency:</strong> Experienced in containerization with Docker and orchestration using Kubernetes</li>
+                                <li><strong>Innovation:</strong> Developed reusable Laravel packages adopted by multiple projects</li>
+                            </ul>
+                        </div>
+                    </td>
+                    
+                    <!-- Right Column -->
+                    <td class="right-column">
+                        <!-- Professional Experience -->
+                        <div class="section">
+                            <h3><span class="emoji">💼</span> Professional Experience</h3>
+                            
+                            <div class="job">
+                                <div class="job-header">
+                                    <div class="job-title">SENIOR FULL STACK DEVELOPER</div>
+                                    <div class="job-company">Blavitch, Lagos Nigeria</div>
+                                    <div class="job-date">October 2022 – Present</div>
+                                </div>
+                                <ul>
+                                    <li><strong>Developed and maintained</strong> critical features including an admin CMS (Content Management System), transaction presenter (both backend and frontend), and various <strong>RESTful APIs</strong> using <strong>Laravel</strong> and <strong>Vue.js</strong></li>
+                                    <li><strong>Applied SOLID Design Principles:</strong> Implemented clean architecture patterns following <strong>Single Responsibility</strong>, <strong>Open/Closed</strong>, and <strong>Dependency Inversion</strong> principles, resulting in maintainable and extensible codebase with 40% fewer bugs</li>
+                                    <li><strong>Revamped API Design Approach:</strong> Implemented a re-engineered API design strategy that leverages <strong>database functions</strong> for processing aggregated data, improving response times by <strong>40%</strong> and simplifying code maintenance</li>
+                                    <li><strong>Built Real-time Features:</strong> Developed real-time notifications and live updates using <strong>WebSockets</strong>, <strong>Pusher</strong>, and <strong>Laravel Broadcasting</strong>, while designing <strong>Redis-based caching</strong> strategies that reduced database queries by <strong>60%</strong></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="job">
+                                <div class="job-header">
+                                    <div class="job-title">FULL STACK DEVELOPER</div>
+                                    <div class="job-company">Kernel Point, Ibadan, Nigeria</div>
+                                    <div class="job-date">October 2016 – April 2022</div>
+                                </div>
+                                <ul>
+                                    <li><strong>Developed backend microservices</strong> using <strong>Laravel</strong> and <strong>PHP</strong>, crafting app prototypes, and refining web app designs with modern <strong>JavaScript frameworks</strong></li>
+                                    <li><strong>Architected Solutions with SOLID Principles:</strong> Designed modular applications following <strong>SOLID design principles</strong> and <strong>clean architecture</strong> patterns, improving code reusability by 35% and reducing maintenance overhead</li>
+                                    <li><strong>Responsible for deployment</strong> of solutions and environment configuration using <strong>Docker</strong>, <strong>Kubernetes orchestration</strong>, and <strong>Laravel Sail</strong>, ensuring seamless functionality across development and production environments</li>
+                                    <li><strong>E-commerce Development:</strong> Built custom <strong>Bagisto</strong> e-commerce solutions with payment gateway integrations including <strong>PayPal</strong>, <strong>Stripe</strong>, and local payment processors, while optimizing database schemas for <strong>25% reduction in system downtime</strong></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="job">
+                                <div class="job-header">
+                                    <div class="job-title">WEB DEVELOPER INTERN</div>
+                                    <div class="job-company">Imamic Technologies, Benin City, Nigeria</div>
+                                    <div class="job-date">February 2014 – May 2015</div>
+                                </div>
+                                <ul>
+                                    <li><strong>Collaborated with team members</strong> to design and implement responsive websites using <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, and <strong>PHP</strong></li>
+                                    <li><strong>Applied Software Design Principles:</strong> Learned and implemented <strong>SOLID principles</strong> and <strong>object-oriented design patterns</strong> in PHP development, contributing to cleaner and more maintainable code</li>
+                                    <li><strong>Conducted acceptance testing</strong> to ensure feature quality and adherence to project requirements using manual and automated testing approaches</li>
+                                    <li><strong>Participated in code reviews</strong> and contributed to open-source <strong>PHP</strong> projects, learning best practices and coding standards while building foundational development skills</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Featured Projects -->
+                        <div class="section">
+                            <h3><span class="emoji">🚀</span> Featured Projects</h3>
+                            
+                            <div class="project">
+                                <div class="project-title">EverTry</div>
+                                <div class="project-subtitle">FinTech Platform for Virtual Cards</div>
+                                <div class="project-description">
+                                    A comprehensive fintech platform offering virtual cards for international payments, along with USDT buying and selling services.
+                                </div>
+                                <div class="project-details">
+                                    <div><strong>Technologies:</strong> PHP Laravel, Vue.js, MySQL, Redis, Third-party APIs, JWT Authentication</div>
+                                    <div><strong>Features:</strong> Virtual card management, cryptocurrency trading, real-time transactions</div>
+                                    <div><strong>Performance:</strong> Handles 10,000+ daily transactions with 99.8% uptime</div>
+                                    <div><strong>Link:</strong> https://evertry.co</div>
+                                </div>
+                            </div>
+                            
+                            <div class="project">
+                                <div class="project-title">Topship Shopify Plugin</div>
+                                <div class="project-subtitle">E-commerce Shipping Solution</div>
+                                <div class="project-description">
+                                    A flexible and reliable shipping app that calculates shipping rates and efficiently manages orders for Shopify stores.
+                                </div>
+                                <div class="project-details">
+                                    <div><strong>Technologies:</strong> PHP Laravel, Vue.js, Shopify API, MySQL, Webhook Processing</div>
+                                    <div><strong>Features:</strong> Dynamic rate calculation, order management, real-time tracking</div>
+                                    <div><strong>Integration:</strong> Seamless Shopify store integration with automated workflows</div>
+                                    <div><strong>Link:</strong> https://apps.shopify.com/topship</div>
+                                </div>
+                            </div>
+                            
+                            <div class="project">
+                                <div class="project-title">Laytask</div>
+                                <div class="project-subtitle">Service Marketplace Platform</div>
+                                <div class="project-description">
+                                    A comprehensive platform connecting service providers to interested service consumers with real-time matching and geolocation features.
+                                </div>
+                                <div class="project-details">
+                                    <div><strong>Technologies:</strong> PHP Laravel, Vue.js, MySQL, Firebase, Google Maps API, WebSocket</div>
+                                    <div><strong>Features:</strong> Real-time messaging, geolocation matching, payment processing</div>
+                                    <div><strong>Architecture:</strong> Microservices with real-time database synchronization</div>
+                                </div>
+                            </div>
+                            
+                            <div class="project">
+                                <div class="project-title">Vortex</div>
+                                <div class="project-subtitle">Virtual Dollar Card Service</div>
+                                <div class="project-description">
+                                    A virtual dollar card service enabling users to make dollar payments, featuring a customizable CMS and integrated email services.
+                                </div>
+                                <div class="project-details">
+                                    <div><strong>Technologies:</strong> PHP Laravel, Vue.js, MySQL, Docker, Email Integration</div>
+                                    <div><strong>Features:</strong> Virtual card issuance, payment processing, admin CMS</div>
+                                    <div><strong>Security:</strong> PCI-compliant payment processing with encrypted data storage</div>
+                                    <div><strong>Link:</strong> https://table.africa</div>
+                                </div>
+                            </div>
+                            
+                            <div class="project">
+                                <div class="project-title">Esints Trading Bot</div>
+                                <div class="project-subtitle">Multi-User Cryptocurrency Trading Platform</div>
+                                <div class="project-description">
+                                    Advanced trading bot consuming Binance API for market monitoring, performance calculation, and automated trading with account management portal.
+                                </div>
+                                <div class="project-details">
+                                    <div><strong>Technologies:</strong> PHP Laravel, Vue.js, MySQL, Binance API, WebSocket, Queue Processing</div>
+                                    <div><strong>Features:</strong> Real-time market analysis, automated trading, portfolio management</div>
+                                    <div><strong>Performance:</strong> Processes 1000+ trades daily with microsecond precision</div>
+                                    <div><strong>Link:</strong> https://github.com/uyibis/esints-trading</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- What Sets Me Apart -->
+                        <div class="section what-sets-apart">
+                            <h3><span class="emoji">🌟</span> What Sets Me Apart</h3>
+                            <ul>
+                                <li><strong>Laravel Mastery:</strong> Expert in Laravel ecosystem including Eloquent ORM, Artisan commands, and package development</li>
+                                <li><strong>Full-Stack Proficiency:</strong> Seamless integration of backend PHP services with modern frontend frameworks</li>
+                                <li><strong>Performance Optimization:</strong> Proven track record of optimizing web applications for speed and scalability</li>
+                                <li><strong>E-commerce Expertise:</strong> Extensive experience in building secure, scalable online commerce platforms</li>
+                                <li><strong>API Integration Specialist:</strong> Expert in integrating complex third-party services and payment gateways</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            "Building robust web solutions with PHP, one feature at a time."
+        </div>
+    </div>
+</body>
+</html>

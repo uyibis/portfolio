@@ -381,7 +381,7 @@
                 <!-- portfolio item -->
                 @foreach($posts as $post)
                      <div class="col-md-4 col-sm-6 grid-item creative design">
-                    <a href="{{ route('posts.show', $post->slug) }}">
+                    <a href="{{ route('projects.show', $post->slug) }}">
                         <div class="portfolio-item">
                             <div class="details">
                                 <h4 class="title">{{ $post->title }}</h4>
@@ -402,7 +402,7 @@
             <hr/>
             <ul class="portfolio-filter list-inline">
                 <li class="current list-inline-item" data-filter="*">
-                    <a style="color:white" href="{{route('posts.list')}}">
+                    <a style="color:white" href="{{route('projects.list')}}">
                     More Projects
                     </a>
                 </li>

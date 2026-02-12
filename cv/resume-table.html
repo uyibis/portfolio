@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ighodaro Egharevba Uyioghosa - Go Developer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.3;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 10px;
+            font-size: 12px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border: 1px solid #ccc;
+        }
+        
+        .main-table {
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-row td {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border: none;
+        }
+        
+        .header-title {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .header-subtitle {
+            font-size: 1.1em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .header-tagline {
+            font-size: 0.85em;
+            font-style: italic;
+            opacity: 0.8;
+        }
+        
+        .contact-row td {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            border: none;
+        }
+        
+        .contact-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .contact-table td {
+            padding: 3px 10px;
+            font-size: 11px;
+            color: #495057;
+            border: none;
+            vertical-align: middle;
+        }
+        
+        .contact-icon {
+            font-size: 12px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .main-content-row .left-column {
+            width: 35%;
+            background: #f8f9fa;
+            padding: 15px;
+            vertical-align: top;
+            border-right: 2px solid #667eea;
+        }
+        
+        .main-content-row .right-column {
+            width: 65%;
+            padding: 15px;
+            vertical-align: top;
+        }
+        
+        .section-title {
+            color: #495057;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 3px;
+        }
+        
+        .section-content {
+            margin-bottom: 15px;
+        }
+        
+        .tech-category-title {
+            color: #6c757d;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 2px;
+        }
+        
+        .tech-tags {
+            margin-bottom: 8px;
+        }
+        
+        .tech-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 9px;
+            font-weight: 500;
+            border: 1px solid #bbdefb;
+            margin: 2px;
+            display: inline-block;
+        }
+        
+        .job-title {
+            font-size: 0.95em;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 2px;
+        }
+        
+        .job-company {
+            color: #007bff;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+        
+        .job-date {
+            color: #6c757d;
+            font-style: italic;
+            font-size: 0.8em;
+            margin-bottom: 5px;
+        }
+        
+        .job-details ul {
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+        
+        .job-details li {
+            margin-bottom: 4px;
+            color: #495057;
+            font-size: 0.85em;
+            line-height: 1.3;
+        }
+        
+        .project-box {
+            background: #f8f9fa;
+            border-left: 3px solid #007bff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        
+        .project-title {
+            font-size: 0.95em;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 3px;
+        }
+        
+        .project-subtitle {
+            color: #007bff;
+            font-style: italic;
+            margin-bottom: 5px;
+            font-size: 0.85em;
+        }
+        
+        .project-description {
+            margin-bottom: 6px;
+            color: #495057;
+            font-size: 0.8em;
+            line-height: 1.3;
+        }
+        
+        .project-details {
+            font-size: 0.75em;
+            color: #6c757d;
+            line-height: 1.2;
+        }
+        
+        .project-details div {
+            margin-bottom: 2px;
+        }
+        
+        .list-content ul {
+            margin-left: 15px;
+        }
+        
+        .list-content li {
+            margin-bottom: 4px;
+            color: #495057;
+            font-size: 0.85em;
+            line-height: 1.3;
+        }
+        
+        .education-item {
+            margin-bottom: 10px;
+        }
+        
+        .education-title {
+            color: #495057;
+            margin-bottom: 3px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        
+        .education-degree {
+            font-weight: 500;
+            color: #007bff;
+            font-size: 0.85em;
+        }
+        
+        .education-date {
+            font-style: italic;
+            color: #6c757d;
+            font-size: 0.75em;
+        }
+        
+        .education-note {
+            color: #495057;
+            font-size: 0.75em;
+            margin-top: 3px;
+        }
+        
+        .footer-row td {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-style: italic;
+            font-size: 0.9em;
+            border: none;
+        }
+        
+        /* Print styles */
+        @media print {
+            body { 
+                padding: 0; 
+                font-size: 11px;
+                line-height: 1.2;
+            }
+            .main-table { 
+                box-shadow: none; 
+                max-width: none;
+            }
+            .header-row td { 
+                padding: 15px;
+            }
+            .header-title { 
+                font-size: 1.6em; 
+            }
+            .header-subtitle { 
+                font-size: 1em; 
+            }
+            .header-tagline { 
+                font-size: 0.8em; 
+            }
+            .contact-row td { 
+                padding: 8px 12px;
+            }
+            .main-content-row .left-column,
+            .main-content-row .right-column { 
+                padding: 12px;
+            }
+            .section-content { 
+                margin-bottom: 12px;
+            }
+            .section-title { 
+                font-size: 1em; 
+            }
+            .tech-tag { 
+                font-size: 8px; 
+                padding: 1px 4px;
+            }
+            .footer-row td { 
+                padding: 8px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table class="main-table">
+        <!-- Header Section -->
+        <tr class="header-row">
+            <td colspan="2">
+                <div class="header-title">IGHODARO EGHAREVBA UYIOGHOSA</div>
+                <div class="header-subtitle">Senior Go Backend Developer & Distributed Systems Engineer</div>
+                <div class="header-tagline">
+                    An innovative and technically proficient Backend Developer specializing in high-performance, scalable Go applications and microservices architecture. Expert in building industry-standard distributed systems, APIs, and cloud-native solutions. Adept at working both independently and collaboratively within agile teams. Currently with over 6 years of experience in backend development and system design.
+                </div>
+            </td>
+        </tr>
+        
+        <!-- Contact Information -->
+        <tr class="contact-row">
+            <td colspan="2">
+                <table class="contact-table">
+                    <tr>
+                        <td class="contact-icon">📍</td>
+                        <td>All Saints Community Phase 2, Sangotedo, Lekki-Epe, Lagos</td>
+                        <td class="contact-icon">📱</td>
+                        <td>+2348164815827</td>
+                        <td class="contact-icon">📧</td>
+                        <td>uyibis@outlook.com</td>
+                    </tr>
+                    <tr>
+                        <td class="contact-icon">🔗</td>
+                        <td>GitHub: github.com/uyibis</td>
+                        <td class="contact-icon">🔗</td>
+                        <td>LinkedIn: linkedin.com/in/ighodaro-uyioghosa</td>
+                        <td class="contact-icon">🐳</td>
+                        <td>Docker Hub: hub.docker.com/u/uyibis</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <!-- Main Content -->
+        <tr class="main-content-row">
+            <!-- Left Column -->
+            <td class="left-column">
+                <!-- Technical Stack -->
+                <div class="section-content">
+                    <div class="section-title">🛠️ Technical Stack</div>
+                    
+                    <div class="tech-category-title">Core Go Technologies</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Go (Golang)</span>
+                        <span class="tech-tag">Goroutines & Channels</span>
+                        <span class="tech-tag">Context Package</span>
+                        <span class="tech-tag">Go Modules</span>
+                        <span class="tech-tag">Go Templates</span>
+                    </div>
+                    
+                    <div class="tech-category-title">Frameworks & Libraries</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Gin Gonic</span>
+                        <span class="tech-tag">Echo</span>
+                        <span class="tech-tag">gRPC</span>
+                        <span class="tech-tag">Protocol Buffers</span>
+                        <span class="tech-tag">Cobra</span>
+                        <span class="tech-tag">Viper</span>
+                    </div>
+                    
+                    <div class="tech-category-title">Databases & Storage</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">GORM</span>
+                        <span class="tech-tag">SQLx</span>
+                        <span class="tech-tag">InfluxDB</span>
+                    </div>
+                    
+                    <div class="tech-category-title">Cloud & DevOps</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">GCP</span>
+                        <span class="tech-tag">Prometheus</span>
+                        <span class="tech-tag">Grafana</span>
+                        <span class="tech-tag">Jaeger</span>
+                    </div>
+                    
+                    <div class="tech-category-title">Message Queues</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">RabbitMQ</span>
+                        <span class="tech-tag">Apache Kafka</span>
+                        <span class="tech-tag">NATS</span>
+                        <span class="tech-tag">WebSockets</span>
+                    </div>
+                </div>
+                
+                <!-- Certifications -->
+                <div class="section-content">
+                    <div class="section-title">🏆 Certifications</div>
+                    <div class="list-content">
+                        <ul>
+                            <li><strong>Go Programming Certification</strong> - Advanced Go Development</li>
+                            <li><strong>AWS Certified Solutions Architect</strong></li>
+                            <li><strong>Kubernetes Application Developer (CKAD)</strong></li>
+                            <li><strong>Software Engineering</strong> - ALX Holberton</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Education -->
+                <div class="section-content">
+                    <div class="section-title">🎓 Education</div>
+                    <div class="education-item">
+                        <div class="education-title">University of Benin, Benin City</div>
+                        <div class="education-degree">Bachelor of Engineering</div>
+                        <div class="education-date">October 2010 – January 2016</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-title">ALX Holberton Software Engineering</div>
+                        <div class="education-degree">Software Engineering Program</div>
+                        <div class="education-date">October 2022 – November 2023</div>
+                        <div class="education-note">Specialized in Go Backend Development and Distributed Systems</div>
+                    </div>
+                </div>
+                
+                <!-- Key Achievements -->
+                <div class="section-content">
+                    <div class="section-title">📈 Key Achievements</div>
+                    <div class="list-content">
+                        <ul>
+                            <li><strong>Performance Expert:</strong> Achieved 10x performance improvements by migrating legacy systems to Go</li>
+                            <li><strong>Scalability Architect:</strong> Designed systems handling millions of requests per day</li>
+                            <li><strong>Team Leadership:</strong> Mentored junior developers in Go best practices and clean architecture</li>
+                            <li><strong>Open Source:</strong> Active contributor to Go community projects and libraries</li>
+                            <li><strong>Innovation:</strong> Pioneered use of Go channels for complex business logic orchestration</li>
+                        </ul>
+                    </div>
+                </div>
+            </td>
+            
+            <!-- Right Column -->
+            <td class="right-column">
+                <!-- Professional Experience -->
+                <div class="section-content">
+                    <div class="section-title">💼 Professional Experience</div>
+                    
+                    <div class="job-title">SENIOR GO BACKEND DEVELOPER</div>
+                    <div class="job-company">Blavitch, Lagos Nigeria</div>
+                    <div class="job-date">October 2022 – Present</div>
+                    <div class="job-details">
+                        <ul>
+                            <li><strong>Architected and developed</strong> critical microservices using <strong>Go (Golang)</strong>, including admin CMS APIs, transaction processing services, and high-throughput payment gateways</li>
+                            <li><strong>Revolutionized API Performance:</strong> Redesigned monolithic PHP services to Go microservices architecture, achieving <strong>40% faster response times</strong> and improved horizontal scalability using <strong>Goroutines</strong> and <strong>channels</strong></li>
+                            <li><strong>Enhanced System Throughput:</strong> Implemented concurrent processing patterns in Go that increased transaction handling capacity by <strong>3x</strong>, processing over 10,000 requests per second</li>
+                            <li><strong>Built Real-time Systems:</strong> Developed WebSocket servers in Go for live transaction updates and notifications, improving user engagement by <strong>30%</strong></li>
+                            <li><strong>Implemented Advanced Caching:</strong> Designed Redis-based caching layers with Go that reduced database load by <strong>60%</strong> and improved API response times</li>
+                            <li><strong>Developed Testing Framework:</strong> Created comprehensive test suites using Go's built-in testing package and <strong>Testify</strong>, achieving <strong>95% code coverage</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-title">BACKEND GO DEVELOPER</div>
+                    <div class="job-company">Kernel Point, Ibadan, Nigeria</div>
+                    <div class="job-date">October 2018 – April 2022</div>
+                    <div class="job-details">
+                        <ul>
+                            <li><strong>Designed Microservices Architecture:</strong> Built scalable backend services using <strong>Go</strong>, <strong>gRPC</strong>, and <strong>Protocol Buffers</strong> for inter-service communication</li>
+                            <li><strong>Container Orchestration:</strong> Implemented <strong>Docker</strong> containerization and <strong>Kubernetes</strong> deployment strategies for Go applications, ensuring seamless CI/CD pipeline</li>
+                            <li><strong>Performance Optimization:</strong> Refactored legacy systems to Go, resulting in <strong>70% reduction in memory usage</strong> and <strong>25% reduction in system downtime</strong></li>
+                            <li><strong>Database Integration:</strong> Designed efficient database layers using <strong>GORM</strong> and raw SQL, implementing connection pooling and query optimization techniques</li>
+                            <li><strong>API Gateway Development:</strong> Built high-performance API gateways using <strong>Go Gin</strong> framework with rate limiting, authentication middleware, and request/response transformation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-title">SOFTWARE DEVELOPER</div>
+                    <div class="job-company">Imamic Technologies, Benin City, Nigeria</div>
+                    <div class="job-date">February 2014 – May 2015</div>
+                    <div class="job-details">
+                        <ul>
+                            <li><strong>Go CLI Tools:</strong> Developed command-line applications and automation scripts using Go's powerful standard library</li>
+                            <li><strong>Code Quality:</strong> Participated in code reviews focusing on Go best practices, idiomatic code patterns, and performance optimization</li>
+                            <li><strong>Open Source Contribution:</strong> Contributed to Go open-source projects and internal tool development</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Featured Projects -->
+                <div class="section-content">
+                    <div class="section-title">🚀 Featured Projects</div>
+                    
+                    <div class="project-box">
+                        <div class="project-title">GoFinTech</div>
+                        <div class="project-subtitle">High-Performance Payment Platform</div>
+                        <div class="project-description">
+                            A scalable fintech platform built with Go microservices, offering virtual cards for international payments and cryptocurrency trading services.
+                        </div>
+                        <div class="project-details">
+                            <div><strong>Technologies:</strong> Go (Gin), gRPC, PostgreSQL, Redis, Docker, Kubernetes, Stripe API</div>
+                            <div><strong>Architecture:</strong> Microservices with API Gateway pattern</div>
+                            <div><strong>Performance:</strong> Handles 50,000+ transactions/day with 99.9% uptime</div>
+                            <div><strong>Link:</strong> https://evertry.co</div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-box">
+                        <div class="project-title">ShipStream</div>
+                        <div class="project-subtitle">Go-Powered Shipping Microservice</div>
+                        <div class="project-description">
+                            High-performance shipping rate calculator and order management system built as a Shopify app backend.
+                        </div>
+                        <div class="project-details">
+                            <div><strong>Technologies:</strong> Go (Echo), Protocol Buffers, MongoDB, Docker, Kubernetes</div>
+                            <div><strong>Features:</strong> Real-time rate calculation, webhook processing, bulk order management</div>
+                            <div><strong>Performance:</strong> Processes 10,000+ shipping calculations per minute</div>
+                            <div><strong>Link:</strong> https://apps.shopify.com/topship</div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-box">
+                        <div class="project-title">ServiceMesh</div>
+                        <div class="project-subtitle">Go Marketplace Platform</div>
+                        <div class="project-description">
+                            Distributed marketplace platform connecting service providers with consumers, featuring real-time matching and geolocation services.
+                        </div>
+                        <div class="project-details">
+                            <div><strong>Technologies:</strong> Go (Gin), WebSockets, PostgreSQL, Redis, Docker, Google Maps API</div>
+                            <div><strong>Architecture:</strong> Event-driven microservices with CQRS pattern</div>
+                            <div><strong>Link:</strong> https://laytask.com</div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-box">
+                        <div class="project-title">CardVault</div>
+                        <div class="project-subtitle">Secure Virtual Card Service</div>
+                        <div class="project-description">
+                            Enterprise-grade virtual dollar card service with advanced security features and customizable CMS.
+                        </div>
+                        <div class="project-details">
+                            <div><strong>Technologies:</strong> Go (Gin), JWT, PostgreSQL, Docker, Kubernetes, Vault</div>
+                            <div><strong>Security:</strong> End-to-end encryption, PCI DSS compliant architecture</div>
+                            <div><strong>Link:</strong> https://table.africa</div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-box">
+                        <div class="project-title">CryptoBot Engine</div>
+                        <div class="project-subtitle">Go Trading Bot Platform</div>
+                        <div class="project-description">
+                            Multi-user cryptocurrency trading bot with real-time market analysis and automated trading strategies.
+                        </div>
+                        <div class="project-details">
+                            <div><strong>Technologies:</strong> Go, WebSockets, TimescaleDB, Redis, Binance API, gRPC</div>
+                            <div><strong>Performance:</strong> Processes 1000+ trades per second with microsecond latency</div>
+                            <div><strong>Features:</strong> Portfolio management, risk assessment, real-time notifications</div>
+                            <div><strong>Link:</strong> https://github.com/uyibis/cryptobot-go</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- What Sets Me Apart -->
+                <div class="section-content">
+                    <div class="section-title">🌟 What Sets Me Apart</div>
+                    <div class="list-content">
+                        <ul>
+                            <li><strong>Concurrency Mastery:</strong> Expert in Go's goroutines and channels for building highly concurrent applications</li>
+                            <li><strong>Performance Optimization:</strong> Proven track record of optimizing Go applications for maximum throughput and minimal latency</li>
+                            <li><strong>Clean Code Advocate:</strong> Strong believer in readable, maintainable Go code following idiomatic patterns</li>
+                            <li><strong>Production Experience:</strong> Extensive experience running Go applications in production at scale</li>
+                            <li><strong>Continuous Learning:</strong> Always exploring the latest Go features and community best practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- Footer -->
+        <tr class="footer-row">
+            <td colspan="2">
+                "Building the future with Go, one goroutine at a time."
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

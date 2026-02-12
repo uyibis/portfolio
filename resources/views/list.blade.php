@@ -19,7 +19,7 @@
             <!-- portfolio item -->
             @foreach($posts as $post)
                 <div class="col-md-4 col-sm-6 grid-item creative design">
-                    <a href="{{ route('posts.show', $post->slug) }}">
+                    <a href="{{ route('projects.show', $post->slug) }}">
                         <div class="portfolio-item">
                             <div class="details">
                                 <h4 class="title">{{ $post->title }}</h4>

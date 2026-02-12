@@ -1,0 +1,550 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Senior Developer Blog Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Senior Developer Blog Schedule
+X-WR-TIMEZONE:Africa/Lagos
+X-WR-CALDESC:120-day blog post schedule for senior PHP/Laravel developer content on Medium (every 2 days)
+
+BEGIN:VEVENT
+DTSTART:20250721T090000Z
+DTEND:20250721T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-001@developer-schedule.com
+SUMMARY:Blog: "The Evolution of PHP - From Scripts to Enterprise Applications"
+DESCRIPTION:Write about PHP's journey from simple scripting to modern enterprise development. Cover PHP 8.x features, performance improvements, and why it's still relevant in 2025.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250723T090000Z
+DTEND:20250723T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-002@developer-schedule.com
+SUMMARY:Blog: "Laravel vs Symphony: A Senior Developer's Perspective"
+DESCRIPTION:Compare these PHP frameworks from a performance, architecture, and maintainability standpoint. Include real-world use cases and decision criteria.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250725T090000Z
+DTEND:20250725T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-003@developer-schedule.com
+SUMMARY:Blog: "Implementing SOLID Principles in Real-World Projects"
+DESCRIPTION:Practical examples of applying SOLID principles in PHP/Laravel projects. Show before/after code examples and measurable improvements.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250727T090000Z
+DTEND:20250727T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-004@developer-schedule.com
+SUMMARY:Blog: "Microservices Architecture: When to Split Your Monolith"
+DESCRIPTION:Decision framework for microservices adoption. Cover challenges, benefits, and practical migration strategies from monolithic applications.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250729T090000Z
+DTEND:20250729T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-005@developer-schedule.com
+SUMMARY:Blog: "Database Optimization Techniques That Actually Work"
+DESCRIPTION:Practical database optimization strategies. Cover indexing, query optimization, caching strategies, and performance monitoring.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250731T090000Z
+DTEND:20250731T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-006@developer-schedule.com
+SUMMARY:Blog: "Vue.js 3 Composition API: A Game Changer for Large Applications"
+DESCRIPTION:Deep dive into Vue 3's Composition API benefits for large-scale applications. Include migration strategies and performance comparisons.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250802T090000Z
+DTEND:20250802T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-007@developer-schedule.com
+SUMMARY:Blog: "Docker vs Kubernetes: Choosing the Right Container Strategy"
+DESCRIPTION:When to use Docker alone vs full Kubernetes orchestration. Include practical examples and cost-benefit analysis.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250804T090000Z
+DTEND:20250804T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-008@developer-schedule.com
+SUMMARY:Blog: "API Design Best Practices: RESTful to GraphQL"
+DESCRIPTION:Comprehensive guide to modern API design. Cover REST principles, GraphQL adoption, versioning strategies, and documentation.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250806T090000Z
+DTEND:20250806T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-009@developer-schedule.com
+SUMMARY:Blog: "Redis Caching Strategies for High-Performance Applications"
+DESCRIPTION:Advanced Redis usage patterns. Cover cache-aside, write-through, and distributed caching strategies with real performance metrics.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250808T090000Z
+DTEND:20250808T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-010@developer-schedule.com
+SUMMARY:Blog: "CI/CD Pipeline Optimization: From Hours to Minutes"
+DESCRIPTION:Practical strategies for speeding up CI/CD pipelines. Cover parallel execution, caching, and infrastructure optimization.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250810T090000Z
+DTEND:20250810T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-011@developer-schedule.com
+SUMMARY:Blog: "The Art of Code Review: Building Better Development Teams"
+DESCRIPTION:Effective code review practices that improve code quality and team collaboration. Include tools, processes, and cultural aspects.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250812T090000Z
+DTEND:20250812T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-012@developer-schedule.com
+SUMMARY:Blog: "Testing Strategies for Modern Web Applications"
+DESCRIPTION:Comprehensive testing approach covering unit, integration, and e2e testing. Include testing pyramids and automation strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250814T090000Z
+DTEND:20250814T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-013@developer-schedule.com
+SUMMARY:Blog: "Security by Design: Building Secure Web Applications"
+DESCRIPTION:Security principles for web development. Cover OWASP Top 10, authentication, authorization, and secure coding practices.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250816T090000Z
+DTEND:20250816T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-014@developer-schedule.com
+SUMMARY:Blog: "AWS vs DigitalOcean: Cloud Platform Decision Guide"
+DESCRIPTION:Practical comparison of cloud platforms for different project sizes and requirements. Include cost analysis and migration considerations.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250818T090000Z
+DTEND:20250818T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-015@developer-schedule.com
+SUMMARY:Blog: "Event-Driven Architecture with RabbitMQ and Pusher"
+DESCRIPTION:Building scalable event-driven systems. Compare message queues vs real-time systems and their appropriate use cases.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250820T090000Z
+DTEND:20250820T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-016@developer-schedule.com
+SUMMARY:Blog: "Performance Monitoring: Beyond Basic Metrics"
+DESCRIPTION:Advanced application performance monitoring strategies. Cover APM tools, custom metrics, and proactive optimization approaches.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250822T090000Z
+DTEND:20250822T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-017@developer-schedule.com
+SUMMARY:Blog: "Building Scalable E-commerce Platforms: Lessons Learned"
+DESCRIPTION:Architecture decisions for high-volume e-commerce. Cover payment processing, inventory management, and scaling strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250824T090000Z
+DTEND:20250824T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-018@developer-schedule.com
+SUMMARY:Blog: "JavaScript Fatigue: Choosing the Right Frontend Framework"
+DESCRIPTION:Framework selection criteria for different project types. Compare React, Vue, Angular, and emerging frameworks.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250826T090000Z
+DTEND:20250826T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-019@developer-schedule.com
+SUMMARY:Blog: "Database Migrations: Zero-Downtime Deployment Strategies"
+DESCRIPTION:Advanced database migration techniques for production systems. Cover blue-green deployments and backward compatibility.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250828T090000Z
+DTEND:20250828T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-020@developer-schedule.com
+SUMMARY:Blog: "Remote Team Leadership: Managing Distributed Development Teams"
+DESCRIPTION:Practical strategies for leading remote development teams. Cover communication, productivity, and culture building.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250830T090000Z
+DTEND:20250830T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-021@developer-schedule.com
+SUMMARY:Blog: "API Rate Limiting and Throttling: Protecting Your Services"
+DESCRIPTION:Implementing effective rate limiting strategies. Cover algorithms, monitoring, and user experience considerations.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250901T090000Z
+DTEND:20250901T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-022@developer-schedule.com
+SUMMARY:Blog: "Clean Code Principles That Actually Matter"
+DESCRIPTION:Practical clean code guidelines beyond basic formatting. Focus on readability, maintainability, and team productivity.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250903T090000Z
+DTEND:20250903T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-023@developer-schedule.com
+SUMMARY:Blog: "Monitoring and Observability in Distributed Systems"
+DESCRIPTION:Building comprehensive monitoring for microservices. Cover logging, metrics, tracing, and alerting strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250905T090000Z
+DTEND:20250905T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-024@developer-schedule.com
+SUMMARY:Blog: "The Economics of Technical Debt: When to Pay It Down"
+DESCRIPTION:Quantifying and managing technical debt. Include decision frameworks and business case development.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250907T090000Z
+DTEND:20250907T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-025@developer-schedule.com
+SUMMARY:Blog: "WebSocket vs Server-Sent Events: Real-time Communication Patterns"
+DESCRIPTION:Choosing the right real-time communication technology. Cover use cases, performance, and implementation considerations.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250909T090000Z
+DTEND:20250909T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-026@developer-schedule.com
+SUMMARY:Blog: "Scaling Team Productivity: Tools and Processes That Work"
+DESCRIPTION:Practical productivity improvements for development teams. Cover tools, workflows, and measurement strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250911T090000Z
+DTEND:20250911T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-027@developer-schedule.com
+SUMMARY:Blog: "GraphQL Federation: Building Distributed API Architectures"
+DESCRIPTION:Advanced GraphQL patterns for large organizations. Cover schema stitching, federation, and governance strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250913T090000Z
+DTEND:20250913T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-028@developer-schedule.com
+SUMMARY:Blog: "Container Security: Beyond Basic Docker Practices"
+DESCRIPTION:Advanced container security strategies. Cover image scanning, runtime security, and orchestration security.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250915T090000Z
+DTEND:20250915T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-029@developer-schedule.com
+SUMMARY:Blog: "Error Handling Strategies in Distributed Systems"
+DESCRIPTION:Robust error handling patterns for microservices. Cover circuit breakers, retries, and graceful degradation.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250917T090000Z
+DTEND:20250917T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-030@developer-schedule.com
+SUMMARY:Blog: "Building Developer-Friendly APIs: Documentation and DX"
+DESCRIPTION:Creating APIs that developers love to use. Cover documentation, SDKs, and developer experience optimization.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250919T090000Z
+DTEND:20250919T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-031@developer-schedule.com
+SUMMARY:Blog: "Career Growth: From Senior Developer to Tech Lead"
+DESCRIPTION:Transitioning from individual contributor to technical leadership. Cover skills, challenges, and growth strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250921T090000Z
+DTEND:20250921T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-032@developer-schedule.com
+SUMMARY:Blog: "Modern CSS: Grid, Flexbox, and Component Architecture"
+DESCRIPTION:Advanced CSS techniques for modern web development. Cover layout systems and maintainable styling approaches.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250923T090000Z
+DTEND:20250923T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-033@developer-schedule.com
+SUMMARY:Blog: "Database Sharding: When and How to Scale Horizontally"
+DESCRIPTION:Practical guide to database sharding. Cover strategies, challenges, and alternatives for scaling data layers.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250925T090000Z
+DTEND:20250925T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-034@developer-schedule.com
+SUMMARY:Blog: "Progressive Web Apps: Native Experience with Web Technologies"
+DESCRIPTION:Building PWAs that compete with native apps. Cover service workers, offline functionality, and performance optimization.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250927T090000Z
+DTEND:20250927T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-035@developer-schedule.com
+SUMMARY:Blog: "AI in Software Development: Practical Applications Today"
+DESCRIPTION:Real-world AI applications in development workflows. Cover code generation, testing, and development productivity tools.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250929T090000Z
+DTEND:20250929T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-036@developer-schedule.com
+SUMMARY:Blog: "Monorepo vs Polyrepo: Managing Large Codebases"
+DESCRIPTION:Repository structure strategies for large projects. Compare tools, workflows, and team collaboration patterns.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251001T090000Z
+DTEND:20251001T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-037@developer-schedule.com
+SUMMARY:Blog: "Building Resilient Payment Systems: Handling Money Safely"
+DESCRIPTION:Architecture patterns for financial applications. Cover transaction safety, reconciliation, and compliance requirements.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251003T090000Z
+DTEND:20251003T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-038@developer-schedule.com
+SUMMARY:Blog: "Serverless Architecture: When Functions Make Sense"
+DESCRIPTION:Practical serverless adoption strategies. Cover use cases, limitations, and cost optimization techniques.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251005T090000Z
+DTEND:20251005T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-039@developer-schedule.com
+SUMMARY:Blog: "Code Documentation: Beyond Comments and README Files"
+DESCRIPTION:Comprehensive documentation strategies for complex systems. Cover architecture decisions, API docs, and knowledge management.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251007T090000Z
+DTEND:20251007T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-040@developer-schedule.com
+SUMMARY:Blog: "Performance Budgets: Keeping Web Applications Fast"
+DESCRIPTION:Implementing and maintaining performance budgets. Cover metrics, monitoring, and optimization workflows.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251009T090000Z
+DTEND:20251009T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-041@developer-schedule.com
+SUMMARY:Blog: "Legacy System Modernization: Strategies That Actually Work"
+DESCRIPTION:Practical approaches to modernizing legacy applications. Cover migration strategies, risk management, and business continuity.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251011T090000Z
+DTEND:20251011T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-042@developer-schedule.com
+SUMMARY:Blog: "Building Multi-Tenant SaaS Applications"
+DESCRIPTION:Architecture patterns for multi-tenant systems. Cover data isolation, customization, and scaling strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251013T090000Z
+DTEND:20251013T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-043@developer-schedule.com
+SUMMARY:Blog: "Web Accessibility: Building Inclusive Applications"
+DESCRIPTION:Practical accessibility implementation. Cover WCAG guidelines, testing strategies, and inclusive design principles.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251015T090000Z
+DTEND:20251015T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-044@developer-schedule.com
+SUMMARY:Blog: "Data Privacy and GDPR: Developer's Implementation Guide"
+DESCRIPTION:Practical privacy implementation for web applications. Cover data handling, consent management, and compliance automation.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251017T090000Z
+DTEND:20251017T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-045@developer-schedule.com
+SUMMARY:Blog: "Feature Flags: Safe Deployment and Experimentation"
+DESCRIPTION:Advanced feature flag strategies. Cover implementation, testing, and gradual rollout techniques.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251019T090000Z
+DTEND:20251019T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-046@developer-schedule.com
+SUMMARY:Blog: "Building Real-time Collaboration Features"
+DESCRIPTION:Implementing collaborative editing and real-time synchronization. Cover conflict resolution and user experience design.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251021T090000Z
+DTEND:20251021T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-047@developer-schedule.com
+SUMMARY:Blog: "Infrastructure as Code: Terraform vs CloudFormation"
+DESCRIPTION:IaC tool comparison and best practices. Cover team workflows, version control, and environment management.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251023T090000Z
+DTEND:20251023T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-048@developer-schedule.com
+SUMMARY:Blog: "Building Effective Development Team Culture"
+DESCRIPTION:Creating productive and inclusive development teams. Cover communication, knowledge sharing, and continuous improvement.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251025T090000Z
+DTEND:20251025T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-049@developer-schedule.com
+SUMMARY:Blog: "Search Implementation: From Basic to Elasticsearch"
+DESCRIPTION:Building robust search functionality. Cover full-text search, faceting, and relevance optimization.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251027T090000Z
+DTEND:20251027T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-050@developer-schedule.com
+SUMMARY:Blog: "Mobile-First Development: Responsive Design Strategies"
+DESCRIPTION:Modern responsive design approaches. Cover mobile performance, touch interfaces, and progressive enhancement.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251029T090000Z
+DTEND:20251029T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-051@developer-schedule.com
+SUMMARY:Blog: "Distributed Tracing: Understanding Complex System Behavior"
+DESCRIPTION:Implementing distributed tracing for microservices. Cover tools, instrumentation, and performance analysis.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251031T090000Z
+DTEND:20251031T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-052@developer-schedule.com
+SUMMARY:Blog: "Building Maintainable CSS at Scale"
+DESCRIPTION:CSS architecture for large applications. Cover methodology, tooling, and team collaboration strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251102T090000Z
+DTEND:20251102T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-053@developer-schedule.com
+SUMMARY:Blog: "Event Sourcing: When Your Application Needs a Memory"
+DESCRIPTION:Event sourcing patterns and implementation. Cover use cases, storage strategies, and projection building.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251104T090000Z
+DTEND:20251104T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-054@developer-schedule.com
+SUMMARY:Blog: "Optimizing for Core Web Vitals: Real Performance Gains"
+DESCRIPTION:Practical techniques for improving Core Web Vitals. Cover measurement, optimization, and monitoring strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251106T090000Z
+DTEND:20251106T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-055@developer-schedule.com
+SUMMARY:Blog: "Building Developer Tools: Lessons from Creating Internal Platforms"
+DESCRIPTION:Designing tools that developers actually want to use. Cover user experience, adoption strategies, and maintenance.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251108T090000Z
+DTEND:20251108T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-056@developer-schedule.com
+SUMMARY:Blog: "Incident Response: Building Resilient Systems and Teams"
+DESCRIPTION:Effective incident management practices. Cover prevention, response, and post-mortem processes.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251110T090000Z
+DTEND:20251110T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-057@developer-schedule.com
+SUMMARY:Blog: "The Future of Web Development: Emerging Trends and Technologies"
+DESCRIPTION:Analysis of emerging web technologies and their potential impact. Cover WebAssembly, edge computing, and new frameworks.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251112T090000Z
+DTEND:20251112T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-058@developer-schedule.com
+SUMMARY:Blog: "Building Global Applications: Internationalization and Localization"
+DESCRIPTION:Practical i18n implementation strategies. Cover text handling, cultural considerations, and technical implementation.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251114T090000Z
+DTEND:20251114T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-059@developer-schedule.com
+SUMMARY:Blog: "Sustainable Software Development: Optimizing for Energy Efficiency"
+DESCRIPTION:Building environmentally conscious applications. Cover performance optimization, cloud efficiency, and sustainable practices.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251116T090000Z
+DTEND:20251116T100000Z
+DTSTAMP:20250720T120000Z
+UID:blog-060@developer-schedule.com
+SUMMARY:Blog: "Reflection: 120 Days of Senior Developer Insights"
+DESCRIPTION:Summary of key learnings and insights from the past 120 days of technical writing. Include reader feedback and future topics.
+END:VEVENT
+
+END:VCALENDAR

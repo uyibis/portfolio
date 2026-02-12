@@ -25,8 +25,24 @@
 
         <p><small>Posted on: {{ $post->created_at->format('M d, Y') }}</small></p>
 
+        @if(is_array($post->stacks ?? null) && count($post->stacks))
+            <p><strong>Stack:</strong> {{ implode(', ', $post->stacks) }}</p>
+        @endif
+
         <!-- Display post description with HTML already converted -->
         <div class="">{!! $post->description !!}</div>
+
+        @if(is_array($post->images ?? null) && count($post->images))
+            <hr>
+            <h4>Project Images</h4>
+            <div class="row g-3">
+                @foreach($post->images as $img)
+                    <div class="col-12 col-md-6">
+                        <img src="{{ $img }}" alt="Project image" style="border-radius: 12px;">
+                    </div>
+                @endforeach
+            </div>
+        @endif
 
         <hr>
 

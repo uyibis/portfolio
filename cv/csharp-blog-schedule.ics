@@ -1,0 +1,550 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Senior C# Developer Blog Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Senior C# Developer Blog Schedule
+X-WR-TIMEZONE:Africa/Lagos
+X-WR-CALDESC:120-day blog post schedule for senior C# developer content on Medium (alternating days)
+
+BEGIN:VEVENT
+DTSTART:20250722T090000Z
+DTEND:20250722T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-001@developer-schedule.com
+SUMMARY:Blog: "C# 12 Features: What's New and Why It Matters"
+DESCRIPTION:Explore the latest C# 12 features including primary constructors, collection expressions, and interceptors. Show practical examples and migration strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250724T090000Z
+DTEND:20250724T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-002@developer-schedule.com
+SUMMARY:Blog: "ASP.NET Core vs ASP.NET Framework: Migration Guide 2025"
+DESCRIPTION:Comprehensive comparison and migration strategies. Cover performance differences, feature parity, and real-world migration experiences.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250726T090000Z
+DTEND:20250726T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-003@developer-schedule.com
+SUMMARY:Blog: "Dependency Injection in .NET: Beyond the Basics"
+DESCRIPTION:Advanced DI patterns including factory patterns, decorators, and custom container configurations. Cover performance implications and best practices.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250728T090000Z
+DTEND:20250728T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-004@developer-schedule.com
+SUMMARY:Blog: "Entity Framework Core Performance Optimization"
+DESCRIPTION:Advanced EF Core optimization techniques. Cover query optimization, change tracking, connection pooling, and bulk operations.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250730T090000Z
+DTEND:20250730T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-005@developer-schedule.com
+SUMMARY:Blog: "Building Microservices with .NET 8 and Docker"
+DESCRIPTION:Complete guide to microservices architecture with .NET. Cover service discovery, configuration management, and inter-service communication.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250801T090000Z
+DTEND:20250801T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-006@developer-schedule.com
+SUMMARY:Blog: "SignalR: Real-time Applications at Scale"
+DESCRIPTION:Building scalable real-time applications with SignalR. Cover connection management, group messaging, and Azure SignalR Service integration.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250803T090000Z
+DTEND:20250803T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-007@developer-schedule.com
+SUMMARY:Blog: "Clean Architecture in .NET: Practical Implementation"
+DESCRIPTION:Implementing Clean Architecture principles in .NET applications. Cover project structure, dependency rules, and testing strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250805T090000Z
+DTEND:20250805T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-008@developer-schedule.com
+SUMMARY:Blog: "Memory Management and Performance in .NET"
+DESCRIPTION:Advanced memory management techniques. Cover garbage collection optimization, memory profiling, and reducing allocations.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250807T090000Z
+DTEND:20250807T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-009@developer-schedule.com
+SUMMARY:Blog: "Async/Await Best Practices: Avoiding Common Pitfalls"
+DESCRIPTION:Advanced async programming patterns. Cover ConfigureAwait, cancellation tokens, and performance optimization strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250809T090000Z
+DTEND:20250809T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-010@developer-schedule.com
+SUMMARY:Blog: "Building RESTful APIs with ASP.NET Core Web API"
+DESCRIPTION:Advanced Web API development patterns. Cover versioning, documentation with OpenAPI, middleware, and custom filters.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250811T090000Z
+DTEND:20250811T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-011@developer-schedule.com
+SUMMARY:Blog: "Unit Testing in .NET: xUnit, NUnit, and MSTest Comparison"
+DESCRIPTION:Comprehensive testing framework comparison. Cover test patterns, mocking frameworks, and test automation strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250813T090000Z
+DTEND:20250813T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-012@developer-schedule.com
+SUMMARY:Blog: "CQRS and Event Sourcing with .NET"
+DESCRIPTION:Implementing CQRS and Event Sourcing patterns. Cover MediatR, event stores, and projection strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250815T090000Z
+DTEND:20250815T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-013@developer-schedule.com
+SUMMARY:Blog: "Blazor: Building Modern Web UIs with C#"
+DESCRIPTION:Advanced Blazor development techniques. Cover component lifecycle, state management, and JavaScript interop.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250817T090000Z
+DTEND:20250817T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-014@developer-schedule.com
+SUMMARY:Blog: "Security in .NET Applications: Authentication and Authorization"
+DESCRIPTION:Implementing robust security in .NET apps. Cover Identity, JWT, OAuth 2.0, and security best practices.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250819T090000Z
+DTEND:20250819T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-015@developer-schedule.com
+SUMMARY:Blog: "gRPC Services in .NET: High-Performance Communication"
+DESCRIPTION:Building efficient gRPC services. Cover protobuf, streaming, error handling, and performance optimization.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250821T090000Z
+DTEND:20250821T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-016@developer-schedule.com
+SUMMARY:Blog: "Configuration Management in .NET: Beyond appsettings.json"
+DESCRIPTION:Advanced configuration patterns. Cover environment-specific configs, Azure Key Vault, and configuration validation.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250823T090000Z
+DTEND:20250823T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-017@developer-schedule.com
+SUMMARY:Blog: "Logging and Monitoring in .NET Applications"
+DESCRIPTION:Comprehensive logging strategies. Cover Serilog, structured logging, and integration with monitoring tools.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250825T090000Z
+DTEND:20250825T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-018@developer-schedule.com
+SUMMARY:Blog: "Background Services in .NET: Beyond Hosted Services"
+DESCRIPTION:Building robust background processing. Cover IHostedService, Hangfire, and Quartz.NET integration.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250827T090000Z
+DTEND:20250827T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-019@developer-schedule.com
+SUMMARY:Blog: "Data Access Patterns: Repository vs. Active Record in .NET"
+DESCRIPTION:Comparing data access patterns. Cover Repository pattern, Unit of Work, and direct EF Core usage.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250829T090000Z
+DTEND:20250829T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-020@developer-schedule.com
+SUMMARY:Blog: "Azure Functions: Serverless Computing with .NET"
+DESCRIPTION:Building scalable serverless applications. Cover triggers, bindings, durable functions, and cost optimization.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250831T090000Z
+DTEND:20250831T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-021@developer-schedule.com
+SUMMARY:Blog: "Minimal APIs in .NET: When Less is More"
+DESCRIPTION:Building lightweight APIs with minimal APIs. Compare with controller-based APIs and performance considerations.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250902T090000Z
+DTEND:20250902T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-022@developer-schedule.com
+SUMMARY:Blog: "Middleware Pipeline in ASP.NET Core: Custom Solutions"
+DESCRIPTION:Building custom middleware components. Cover pipeline ordering, error handling, and performance optimization.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250904T090000Z
+DTEND:20250904T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-023@developer-schedule.com
+SUMMARY:Blog: "Working with JSON in .NET: System.Text.Json vs Newtonsoft"
+DESCRIPTION:JSON serialization comparison and optimization. Cover performance benchmarks and migration strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250906T090000Z
+DTEND:20250906T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-024@developer-schedule.com
+SUMMARY:Blog: "Pattern Matching in C#: From Switch to Advanced Patterns"
+DESCRIPTION:Advanced pattern matching techniques. Cover switch expressions, property patterns, and performance implications.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250908T090000Z
+DTEND:20250908T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-025@developer-schedule.com
+SUMMARY:Blog: "Health Checks in .NET: Building Resilient Applications"
+DESCRIPTION:Implementing comprehensive health monitoring. Cover custom health checks, UI dashboards, and alerting integration.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250910T090000Z
+DTEND:20250910T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-026@developer-schedule.com
+SUMMARY:Blog: "Caching Strategies in .NET: In-Memory, Distributed, and Redis"
+DESCRIPTION:Advanced caching patterns. Compare IMemoryCache, IDistributedCache, and Redis implementations.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250912T090000Z
+DTEND:20250912T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-027@developer-schedule.com
+SUMMARY:Blog: "Error Handling in .NET: Global Exception Management"
+DESCRIPTION:Robust error handling strategies. Cover global exception filters, problem details, and error logging.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250914T090000Z
+DTEND:20250914T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-028@developer-schedule.com
+SUMMARY:Blog: "Database Migrations with Entity Framework Core"
+DESCRIPTION:Advanced migration strategies. Cover code-first migrations, data seeding, and production deployment.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250916T090000Z
+DTEND:20250916T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-029@developer-schedule.com
+SUMMARY:Blog: "Building Custom Attributes and Reflection in .NET"
+DESCRIPTION:Advanced reflection techniques. Cover custom attributes, runtime type inspection, and performance considerations.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250918T090000Z
+DTEND:20250918T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-030@developer-schedule.com
+SUMMARY:Blog: "Message Queuing with RabbitMQ and .NET"
+DESCRIPTION:Implementing message queues in .NET. Cover producer-consumer patterns, dead letter queues, and scaling strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250920T090000Z
+DTEND:20250920T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-031@developer-schedule.com
+SUMMARY:Blog: "Source Generators in C#: Compile-Time Code Generation"
+DESCRIPTION:Building custom source generators. Cover use cases, performance benefits, and debugging techniques.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250922T090000Z
+DTEND:20250922T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-032@developer-schedule.com
+SUMMARY:Blog: "API Versioning in ASP.NET Core: Strategies and Best Practices"
+DESCRIPTION:Implementing API versioning. Cover URL, header, and query parameter versioning strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250924T090000Z
+DTEND:20250924T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-033@developer-schedule.com
+SUMMARY:Blog: "Worker Services in .NET: Building Background Applications"
+DESCRIPTION:Creating robust worker services. Cover service lifecycle, configuration, and deployment strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250926T090000Z
+DTEND:20250926T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-034@developer-schedule.com
+SUMMARY:Blog: "Span<T> and Memory<T>: High-Performance .NET Programming"
+DESCRIPTION:Advanced memory management with Span and Memory. Cover performance optimizations and practical use cases.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250928T090000Z
+DTEND:20250928T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-035@developer-schedule.com
+SUMMARY:Blog: "File Handling in .NET: From Basic IO to Azure Blob Storage"
+DESCRIPTION:Comprehensive file handling strategies. Cover local file systems, cloud storage, and streaming operations.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250930T090000Z
+DTEND:20250930T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-036@developer-schedule.com
+SUMMARY:Blog: "Polly: Resilience Patterns in .NET Applications"
+DESCRIPTION:Implementing resilience with Polly. Cover retry policies, circuit breakers, and timeout strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251002T090000Z
+DTEND:20251002T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-037@developer-schedule.com
+SUMMARY:Blog: "GraphQL in .NET: Building Modern APIs with Hot Chocolate"
+DESCRIPTION:Advanced GraphQL implementation. Cover schema design, resolvers, and performance optimization.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251004T090000Z
+DTEND:20251004T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-038@developer-schedule.com
+SUMMARY:Blog: "DevOps for .NET: CI/CD with GitHub Actions and Azure"
+DESCRIPTION:Building deployment pipelines for .NET applications. Cover automated testing, deployment strategies, and monitoring.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251006T090000Z
+DTEND:20251006T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-039@developer-schedule.com
+SUMMARY:Blog: "Custom Model Binding in ASP.NET Core"
+DESCRIPTION:Advanced model binding techniques. Cover custom model binders, type converters, and validation strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251008T090000Z
+DTEND:20251008T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-040@developer-schedule.com
+SUMMARY:Blog: "Performance Profiling .NET Applications: Tools and Techniques"
+DESCRIPTION:Comprehensive performance analysis. Cover profiling tools, bottleneck identification, and optimization strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251010T090000Z
+DTEND:20251010T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-041@developer-schedule.com
+SUMMARY:Blog: "Event-Driven Architecture with .NET and MassTransit"
+DESCRIPTION:Building event-driven systems. Cover message buses, saga patterns, and distributed transaction management.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251012T090000Z
+DTEND:20251012T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-042@developer-schedule.com
+SUMMARY:Blog: "Rate Limiting in ASP.NET Core: Protecting Your APIs"
+DESCRIPTION:Implementing rate limiting strategies. Cover algorithms, custom rate limiters, and distributed rate limiting.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251014T090000Z
+DTEND:20251014T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-043@developer-schedule.com
+SUMMARY:Blog: "Containerizing .NET Applications: Docker Best Practices"
+DESCRIPTION:Advanced Docker techniques for .NET. Cover multi-stage builds, security, and optimization strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251016T090000Z
+DTEND:20251016T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-044@developer-schedule.com
+SUMMARY:Blog: "Advanced LINQ: Custom Operators and Performance"
+DESCRIPTION:Building custom LINQ operators. Cover expression trees, IQueryable, and performance optimization.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251018T090000Z
+DTEND:20251018T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-045@developer-schedule.com
+SUMMARY:Blog: "Feature Flags in .NET: Azure App Configuration Integration"
+DESCRIPTION:Implementing feature toggles. Cover configuration management, gradual rollouts, and A/B testing.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251020T090000Z
+DTEND:20251020T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-046@developer-schedule.com
+SUMMARY:Blog: "Building Multi-Tenant SaaS with .NET"
+DESCRIPTION:Multi-tenancy patterns in .NET. Cover data isolation, tenant identification, and scaling strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251022T090000Z
+DTEND:20251022T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-047@developer-schedule.com
+SUMMARY:Blog: "Distributed Caching with Redis and .NET"
+DESCRIPTION:Advanced Redis integration. Cover clustering, pub/sub patterns, and performance optimization.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251024T090000Z
+DTEND:20251024T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-048@developer-schedule.com
+SUMMARY:Blog: "Building Custom Analyzers for .NET Code Quality"
+DESCRIPTION:Creating code analyzers and fix providers. Cover Roslyn API, static analysis, and team adoption.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251026T090000Z
+DTEND:20251026T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-049@developer-schedule.com
+SUMMARY:Blog: "WebAssembly with Blazor: Performance and Interop"
+DESCRIPTION:Advanced Blazor WebAssembly techniques. Cover performance optimization, JavaScript interop, and debugging.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251028T090000Z
+DTEND:20251028T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-050@developer-schedule.com
+SUMMARY:Blog: "Domain-Driven Design with .NET: Practical Implementation"
+DESCRIPTION:Implementing DDD patterns. Cover aggregates, domain events, and bounded contexts in .NET applications.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251030T090000Z
+DTEND:20251030T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-051@developer-schedule.com
+SUMMARY:Blog: "Testing Strategies: Integration Tests with TestContainers"
+DESCRIPTION:Advanced integration testing. Cover TestContainers, database testing, and test environment management.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251101T090000Z
+DTEND:20251101T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-052@developer-schedule.com
+SUMMARY:Blog: "Building Resilient APIs: Circuit Breakers and Bulkheads"
+DESCRIPTION:Implementing resilience patterns. Cover fault tolerance, isolation, and graceful degradation strategies.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251103T090000Z
+DTEND:20251103T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-053@developer-schedule.com
+SUMMARY:Blog: "Custom Formatters in ASP.NET Core: Beyond JSON"
+DESCRIPTION:Building custom input/output formatters. Cover content negotiation, custom media types, and performance.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251105T090000Z
+DTEND:20251105T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-054@developer-schedule.com
+SUMMARY:Blog: "Real-time Notifications: SignalR vs Server-Sent Events"
+DESCRIPTION:Comparing real-time technologies. Cover use cases, performance, and scaling considerations.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251107T090000Z
+DTEND:20251107T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-055@developer-schedule.com
+SUMMARY:Blog: "Secrets Management in .NET: Azure Key Vault and Beyond"
+DESCRIPTION:Secure secrets handling. Cover configuration providers, rotation strategies, and development workflows.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251109T090000Z
+DTEND:20251109T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-056@developer-schedule.com
+SUMMARY:Blog: "Building High-Performance APIs with ASP.NET Core"
+DESCRIPTION:API performance optimization. Cover response compression, output caching, and benchmarking techniques.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251111T090000Z
+DTEND:20251111T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-057@developer-schedule.com
+SUMMARY:Blog: "Migrating to .NET 8: Breaking Changes and New Features"
+DESCRIPTION:Comprehensive .NET 8 migration guide. Cover breaking changes, new APIs, and performance improvements.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251113T090000Z
+DTEND:20251113T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-058@developer-schedule.com
+SUMMARY:Blog: "Building Command-Line Tools with .NET"
+DESCRIPTION:Creating robust CLI applications. Cover System.CommandLine, parsing strategies, and distribution methods.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251115T090000Z
+DTEND:20251115T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-059@developer-schedule.com
+SUMMARY:Blog: "Advanced Entity Framework: Query Optimization and Debugging"
+DESCRIPTION:EF Core performance deep dive. Cover query execution plans, debugging tools, and optimization techniques.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251117T090000Z
+DTEND:20251117T100000Z
+DTSTAMP:20250720T120000Z
+UID:csharp-060@developer-schedule.com
+SUMMARY:Blog: "Reflection: 120 Days of C# and .NET Insights"
+DESCRIPTION:Summary of C# development insights and trends. Include community feedback, emerging patterns, and future directions.
+END:VEVENT
+
+END:VCALENDAR

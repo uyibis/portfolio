@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Project;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $projects = Project::query()->orderByDesc('id')->paginate(20);
+
+        $stats = [
+            'total' => Project::query()->count(),
+            'published' => Project::query()->where('publish', true)->count(),
+            'drafts' => Project::query()->where('publish', false)->count(),
+        ];
+
+        return view('home', compact('projects', 'stats'));
     }
 }
